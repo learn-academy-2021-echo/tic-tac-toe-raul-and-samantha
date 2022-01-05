@@ -7,7 +7,7 @@
 
 
 }
-.gameboard{
+.squares{
   display: flex;
   width: 620px;
   flex-wrap: wrap;
