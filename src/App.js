@@ -8,6 +8,7 @@ class App extends Component{
     this.state = {
       squares: [0, 0, 0, 0, 0, 0, 0, 0, 0],
       turn: 0,
+      
 
     }
   }
@@ -20,23 +21,27 @@ class App extends Component{
 
   handleGamePlay = (index) =>{
     const {squares} = this.state
-      
-
+    
     if (this.state.turn % 2 === 0 && squares[index] === 0){
-
       squares[index]="❌"
       this.setState({squares: squares, turn: this.state.turn +1})
-
-
     } else if (this.state.turn % 2 !== 0 && squares[index] === 0) {
       squares[index]="⭕️"
       this.setState({squares: squares, turn: this.state.turn +1})
     }
+  }
+  // winning = ()=> {
 
-    }
+  //   const winningConditions = [ [0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6] ]
+  //     if (this.state.squares[index] [0][1][2] === true){this.setState({winner: "❌"})
+  //       alert(winner)
+  //     }
+
+  // }
 
 
 // we need a way to have X and O change turns.
+// We need a way to set winning conditons, by stating what the winning index pairs are.  ex. [0,1,2]
 
 
   render(){
